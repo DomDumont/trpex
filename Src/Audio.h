@@ -1,11 +1,18 @@
 #ifndef __AUDIO_H__
 #define __AUDIO_H__
 
+#include <al.h>
+#include <alc.h>
+
 class Audio
 {
 public:
-	void Init ();
+	bool Init ();
 	void Shutdown ();
+
+private:
+	ALCdevice* device;
+	ALCcontext* context;
 };
 
 
