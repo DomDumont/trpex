@@ -5,6 +5,7 @@ before_script:
     - sudo apt-get -y -q install libopenal-dev
     - mkdir build
     - cd build
+    - cmake --version
     - cmake ..
 
 script: make  
