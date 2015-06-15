@@ -7,8 +7,13 @@ cmake_policy(SET CMP0015 NEW)
 project(TRPEX)
 
 
-include_directories(Extern/OpenAL/include)
-link_directories(Extern/OpenAL/libs/Win32/)
+FIND_PACKAGE(OPENAL)
+
+
+if (OPENAL_FOUND)
+	include_directories(${OPENAL_INCLUDE_DIR})
+endif (OPENAL_FOUND)
+
 
 #Génération de la liste des fichiers sources
 
@@ -35,4 +40,7 @@ add_executable(
 )
 
 
-target_link_libraries(trpex OpenAL32)
+if (OPENAL_FOUND)	
+	message ("coucou2")
+	target_link_libraries (trpex ${OPENAL_LIBRARY})
+endif (OPENAL_FOUND)
