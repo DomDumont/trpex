@@ -6,6 +6,8 @@ cmake_policy(SET CMP0015 NEW)
 
 project(TRPEX)
 
+# Set CMake modules search path
+set (CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMake/Modules)
 
 FIND_PACKAGE(OPENAL)
 
