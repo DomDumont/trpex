@@ -37,7 +37,7 @@ file(
 
 add_executable(
 
-        trpex
+        TRPEX
 
         ${source_files}
 
@@ -46,5 +46,5 @@ add_executable(
 
 if (OPENAL_FOUND)	
 	message ("coucou2")
-	target_link_libraries (trpex ${OPENAL_LIBRARY})
+	target_link_libraries (TRPEX ${OPENAL_LIBRARY})
 endif (OPENAL_FOUND)
