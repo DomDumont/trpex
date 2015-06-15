@@ -9,6 +9,8 @@ project(TRPEX)
 # Set CMake modules search path
 set (CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMake/Modules)
 
+message (${CMAKE_MODULE_PATH})
+
 FIND_PACKAGE(OPENAL)
 
 
