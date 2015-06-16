@@ -13,6 +13,7 @@ message (${CMAKE_MODULE_PATH})
 
 FIND_PACKAGE(OPENAL)
 
+add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 
 if (OPENAL_FOUND)
 	include_directories(${OPENAL_INCLUDE_DIR})
