@@ -35,16 +35,10 @@ file(
 
 #Déclaration de l'exécutable
 
-add_executable(
-
-        TRPEX
-
-        ${source_files}
-
-)
+add_executable(trpx ${source_files})
 
 
 if (OPENAL_FOUND)	
 	message ("coucou2")
-	target_link_libraries (TRPEX ${OPENAL_LIBRARY})
+	target_link_libraries (trpx ${OPENAL_LIBRARY})
 endif (OPENAL_FOUND)
